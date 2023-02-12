@@ -11,15 +11,17 @@ import {
 } from '@jupyterlab/apputils';
 
 import { Widget } from '@lumino/widgets';
-import { CounterWidget } from './react_widget';
+import { CounterWidget } from './ReactCounter';
 import { reactIcon } from '@jupyterlab/ui-components';
+import { FlowWidget } from './ReactFlow';
 
 /**
  * The command IDs used by the react-widget plugin.
  */
 namespace CommandIDs {
-  export const react_widget = 'create-react-widget';
   export const apod = 'apod:open';
+  export const react_counter = 'create-react-counter-widget';
+  export const react_flow = 'create-react-flow-widget'
 }
 
 // define the type that was introduced in the newWidget() function
@@ -37,9 +39,9 @@ class APODWidget extends Widget {
   * Construct a new APOD widget.
   */
   constructor() {
-    super();
+    super(); // in order to run the constructor of the base class Widget (TS-specific)
 
-    this.addClass('my-apodWidget');
+    this.addClass('my-apodWidget'); // add css stylings
 
     // Add an image element to the panel
     this.img = document.createElement('img');
@@ -109,6 +111,9 @@ class APODWidget extends Widget {
 function activate(app: JupyterFrontEnd, palette: ICommandPalette, restorer: ILayoutRestorer | null) {
   console.log('JupyterLab extension jupyterlab_apod is activated!');
 
+  /**
+   * 1) tutorial
+   */
   // Declare a widget variable
   let widget: MainAreaWidget<APODWidget>;
 
@@ -156,7 +161,10 @@ function activate(app: JupyterFrontEnd, palette: ICommandPalette, restorer: ILay
     });
   }
 
-  let command_2:string = CommandIDs.react_widget
+  /**
+   * 2) react counter widget command
+   */
+  let command_2:string = CommandIDs.react_counter
   app.commands.addCommand(command_2, {
     caption: 'Create a new React Widget',
     label: 'React Counter Widget',
@@ -191,6 +199,47 @@ function activate(app: JupyterFrontEnd, palette: ICommandPalette, restorer: ILay
     restorer.restore(tracker_counter, {
       command: command_2,
       name: () => 'react_counter'
+    });
+  }
+
+  /**
+   * 3) react flowchart widget command
+   */
+  let command_3:string = CommandIDs.react_flow
+  app.commands.addCommand(command_3, {
+    caption: 'Create a new React Flowchart widget',
+    label: 'React Flow Widget',
+    execute: () => {
+      const content = new FlowWidget();
+      const widget = new MainAreaWidget<FlowWidget>({ content });
+      widget.title.label = 'React Flowchart';
+      widget.title.icon = reactIcon;
+
+      if (!tracker_flow.has(widget)) {
+        // Track the state of the widget for later restoration
+        tracker_flow.add(widget);
+      }
+
+      if (!widget.isAttached) {
+        // Attach the widget to the main work area if it's not there
+        app.shell.add(widget, 'main');
+      }
+    },
+  });
+
+  // Add the command to the palette
+  palette.addItem({ command: command_3, category: 'Tutorial' });
+
+  // Track and restore the widget state
+  let tracker_flow = new WidgetTracker<MainAreaWidget<FlowWidget>>({
+    namespace: 'react_flow'
+  });
+
+  // Since the plugin token is declared as optional so restorer can be ILayoutRestorer | null
+  if (restorer) {
+    restorer.restore(tracker_flow, {
+      command: command_3,
+      name: () => 'react_flow'
     });
   }
 

@@ -1,6 +1,6 @@
-import { ReactWidget } from '@jupyterlab/apputils';
-
 import React, { useState } from 'react';
+// for converting a react component to a react widget in JL
+import { ReactWidget } from '@jupyterlab/apputils';
 
 /**
  * React component for a counter.

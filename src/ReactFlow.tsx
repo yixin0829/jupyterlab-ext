@@ -54,14 +54,16 @@ const nodeTypes = {
 // for node colouring
 const nodeColor = (node: Node) => {
   switch (node.type) {
-    case 'variable':
+    case 'dataframe':
       return '#6ede87';
-    case 'function':
+    case 'variable':
       return '#6865A5';
     case 'plot':
       return '#ff0072';
+    case 'insight':
+      return '#3e4959'
     default:
-      return '#ff0072';
+      return '#000000';
   }
 };
 

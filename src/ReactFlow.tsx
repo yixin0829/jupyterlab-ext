@@ -14,8 +14,12 @@ import ReactFlow, {
   useEdgesState,
   Handle,
   NodeProps,
-  Position
+  Position,
+  MiniMap,
+  Controls,
 } from "reactflow";
+import initialNodes from './Nodes'
+import initialEdges from './Edges'
 
 
 const CustomNode = ({
@@ -43,30 +47,22 @@ const CustomNode = ({
 
 CustomNode.displayName = "CustomNode";
 
-const initialNodes: Node[] = [
-  {
-    id: "1",
-    type: "input",
-    data: { label: "Node 1" },
-    position: { x: 250, y: 50 }
-  },
-  { id: "2", data: { label: "Node 2" }, position: { x: 100, y: 150 } },
-  { id: "3", data: { label: "Node 3" }, position: { x: 400, y: 150 } },
-  // {
-  //   id: "4",
-  //   type: "custom",
-  //   data: { label: "Node 4" },
-  //   position: { x: 400, y: 200 }
-  // }
-];
-
-const initialEdges: Edge[] = [
-  { id: "e1-2", source: "1", target: "2" },
-  { id: "e1-3", source: "1", target: "3" }
-];
-
 const nodeTypes = {
   custom: CustomNode
+};
+
+// for node colouring
+const nodeColor = (node: Node) => {
+  switch (node.type) {
+    case 'variable':
+      return '#6ede87';
+    case 'function':
+      return '#6865A5';
+    case 'plot':
+      return '#ff0072';
+    default:
+      return '#ff0072';
+  }
 };
 
 const FlowComponent = () => {
@@ -87,6 +83,8 @@ const FlowComponent = () => {
       nodeTypes={nodeTypes}
     >
       <Background />
+      <MiniMap nodeColor={nodeColor} nodeStrokeWidth={3} zoomable pannable />
+      <Controls/>
     </ReactFlow>
   );
 };

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1-1",
+    "type": "dataframe",
+    "data": { "label": "IBM_Attrition.csv" },
+    "position": { "x": 250, "y": 50 },
+    "style": { "backgroundColor": "#6ede87", "color": "white" }
+  },
+  {
+    "id": "2-1",
+    "type": "dataframe",
+    "data": { "label": "employee" },
+    "position": { "x": 250, "y": 150 },
+    "style": { "backgroundColor": "#6ede87", "color": "white" }
+  },
+  {
+    "id": "3-1",
+    "type": "variable",
+    "data": { "label": "Attrition" },
+    "position": { "x": 100, "y": 250 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "3-2",
+    "type": "variable",
+    "data": { "label": "MonthlyIncome" },
+    "position": { "x": 400, "y": 250 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "4-1",
+    "type": "variable",
+    "data": { "label": "MonthlyIncome" },
+    "position": { "x": 100, "y": 350 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "4-4",
+    "type": "variable",
+    "data": { "label": "JobLevel" },
+    "position": { "x": 700, "y": 350 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "4-5",
+    "type": "variable",
+    "data": { "label": "JobSatisfication" },
+    "position": { "x": 900, "y": 350 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "4-6",
+    "type": "variable",
+    "data": { "label": "JobLevel" },
+    "position": { "x": 1100, "y": 350 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "5-1",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 100, "y": 450 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "5-2",
+    "type": "variable",
+    "data": { "label": "Department" },
+    "position": { "x": 300, "y": 450 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "5-3",
+    "type": "variable",
+    "data": { "label": "JobLevel" },
+    "position": { "x": 500, "y": 450 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "5-4",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 700, "y": 450 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "5-5",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 900, "y": 450 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "5-6",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 1100, "y": 450 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "6-1",
+    "type": "insight",
+    "data": { "label": "insight" },
+    "position": { "x": 100, "y": 550 },
+    "style": { "backgroundColor": "#3e4959", "color": "white" }
+  },
+  {
+    "id": "6-2",
+    "type": "variable",
+    "data": { "label": "OverTime" },
+    "position": { "x": 300, "y": 550 },
+    "style": { "backgroundColor": "#6865A5", "color": "white" }
+  },
+  {
+    "id": "6-3",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 500, "y": 550 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "6-4",
+    "type": "insight",
+    "data": { "label": "Insight" },
+    "position": { "x": 700, "y": 550 },
+    "style": { "backgroundColor": "#3e4959", "color": "white" }
+  },
+  {
+    "id": "6-5",
+    "type": "insight",
+    "data": { "label": "Insight" },
+    "position": { "x": 900, "y": 550 },
+    "style": { "backgroundColor": "#3e4959", "color": "white" }
+  },
+  {
+    "id": "6-6",
+    "type": "insight",
+    "data": { "label": "Insight" },
+    "position": { "x": 1100, "y": 550 },
+    "style": { "backgroundColor": "#3e4959", "color": "white" }
+  },
+  {
+    "id": "7-2",
+    "type": "plot",
+    "data": { "label": "Plot" },
+    "position": { "x": 300, "y": 650 },
+    "style": { "backgroundColor": "#ff0072", "color": "white" }
+  },
+  {
+    "id": "8-2",
+    "type": "insight",
+    "data": { "label": "insight" },
+    "position": { "x": 300, "y": 750 },
+    "style": { "backgroundColor": "#3e4959", "color": "white" }
+  }
+]

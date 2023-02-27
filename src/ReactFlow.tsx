@@ -18,8 +18,8 @@ import ReactFlow, {
   MiniMap,
   Controls,
 } from "reactflow";
-import initialNodes from './Nodes'
-import initialEdges from './Edges'
+import initialNodes from './Nodes.json'
+import initialEdges from './Edges.json'
 
 
 const CustomNode = ({

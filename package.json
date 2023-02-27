@@ -59,7 +59,7 @@
     "@jupyterlab/apputils": "^3.6.1",
     "@jupyterlab/ui-components": "^3.6.1",
     "@lumino/widgets": "^1.37.1",
-    "reactflow": "^11.5.5"
+    "reactflow": "^11.5.6"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
